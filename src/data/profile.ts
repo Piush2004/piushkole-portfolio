@@ -91,7 +91,7 @@ export const profile = {
       lessonsLearned: "Learned how to effectively orchestrate multiple AI agents and manage state across complex data analysis workflows.",
       futureScope: "Integration with cloud databases, adding advanced AutoML capabilities, and offering an API layer for enterprise integrations.",
       image: "/images/agentix_premium.jpg",
-      githubUrl: "https://github.com/Piush2004/Agentix-AI",
+      githubUrl: "https://github.com/Piush2004/Agentix",
       demoUrl: null,
       type: "Public Repository",
       status: "Active"
