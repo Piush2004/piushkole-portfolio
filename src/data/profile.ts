@@ -147,29 +147,28 @@ export const profile = {
       status: "Active Research"
     },
     {
-      id: "portfolio",
-      title: "Developer Portfolio",
-      subtitle: "Terminal-Inspired Engineering Showcase",
-      description: "A blazing fast, accessible, and uniquely styled portfolio that acts as a digital resume and engineering case study platform.",
-      problem: "Needed a digital presence that reflects my technical identity and engineering values rather than a generic marketing site.",
-      solution: "Built a custom React application with Next.js App Router, Tailwind CSS (with strict tokens), and Framer Motion for minimal, purposeful animations.",
+      id: "quantum-ml",
+      title: "Quantum Machine Learning",
+      subtitle: "Variational Quantum Circuits for Classification",
+      description: "Researching the application of Parameterized Quantum Circuits (PQCs) as machine learning models to solve complex classification tasks.",
+      problem: "Classical machine learning models often struggle with extremely high-dimensional spaces where quantum entanglement and superposition could theoretically provide an advantage.",
+      solution: "Developed a hybrid quantum-classical neural network utilizing Qiskit to train variational quantum circuits with classical optimization algorithms.",
       features: [
-        "Static Generation",
-        "Serverless Contact Form",
-        "GitHub API Integration",
-        "Custom Design System",
-        "Responsive Layout"
+        "Quantum State Preparation",
+        "Variational Quantum Eigensolver",
+        "Hybrid Architecture",
+        "PennyLane / Qiskit Integration"
       ],
-      techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      architecture: ["Next.js Frontend", "Tailwind Theme", "Framer Motion", "Web3Forms API", "Vercel"],
-      challenges: "Implementing strict styling constraints (like zero gradients and shadows) while maintaining a premium and highly interactive feel.",
-      lessonsLearned: "Mastered the Next.js App router paradigm, static site generation, and building complex accessible UI components from scratch.",
-      futureScope: "Adding a dedicated blog section powered by MDX to share technical articles and research findings.",
-      image: "/images/portfolio.jpg",
-      githubUrl: "https://github.com/Piush2004/Portfolio-Website-Task-1-",
+      techStack: ["Python", "Qiskit", "PennyLane", "PyTorch", "Quantum Computing"],
+      architecture: ["Classical Data", "Quantum Embedding", "Parameterized Quantum Circuit", "Measurement", "Classical Optimizer"],
+      challenges: "Dealing with the barren plateau problem during optimization and simulating large quantum circuits efficiently on classical hardware.",
+      lessonsLearned: "Gained deep understanding of quantum mechanics, Hilbert spaces, and translating classical machine learning concepts into the quantum realm.",
+      futureScope: "Running the optimized circuits on real NISQ hardware from IBM Quantum and expanding the model to handle multi-class image classification.",
+      image: "/images/quantum.jpg",
+      githubUrl: "https://github.com/Piush2004/Quantum-ML",
       demoUrl: null,
-      type: "Frontend Engineering",
-      status: "Completed"
+      type: "Research Project",
+      status: "Active Research"
     }
   ],
   certifications: [
