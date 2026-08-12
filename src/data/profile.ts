@@ -91,7 +91,7 @@ export const profile = {
       lessonsLearned: "Learned how to effectively orchestrate multiple AI agents and manage state across complex data analysis workflows.",
       futureScope: "Integration with cloud databases, adding advanced AutoML capabilities, and offering an API layer for enterprise integrations.",
       image: "/images/agentix_premium.jpg",
-      githubUrl: "https://github.com/Piush2004/Agentix",
+      githubUrl: null as string | null,
       demoUrl: null,
       type: "Public Repository",
       status: "Active"
@@ -116,7 +116,7 @@ export const profile = {
       lessonsLearned: "Gained deep insights into the mathematical foundations of computer vision, coordinate geometry, and dealing with real-world noise in image data.",
       futureScope: "Virtual Try-On for e-commerce, automated fashion sizing, healthcare monitoring, and anthropometric analysis.",
       image: "/images/body_measurement_premium.jpg",
-      githubUrl: null,
+      githubUrl: null as string | null,
       demoUrl: null,
       type: "Research Project",
       status: "Research in progress"
@@ -141,7 +141,7 @@ export const profile = {
       lessonsLearned: "Gained deep experience with adversarial training dynamics and the inner workings of attention mechanisms in transformer models.",
       futureScope: "Integrating the detection pipeline directly into real-time RAG applications to score and filter retrieved context.",
       image: "/images/llm_hallucination.jpg",
-      githubUrl: "https://github.com/Piush2004/LLM-Hallucination",
+      githubUrl: null as string | null,
       demoUrl: null,
       type: "Research Project",
       status: "Active Research"
@@ -165,7 +165,7 @@ export const profile = {
       lessonsLearned: "Gained deep understanding of quantum mechanics, Hilbert spaces, and translating classical machine learning concepts into the quantum realm.",
       futureScope: "Running the optimized circuits on real NISQ hardware from IBM Quantum and expanding the platform to handle multi-class image classification.",
       image: "/images/quantum.jpg",
-      githubUrl: "https://github.com/Piush2004/QSCI",
+      githubUrl: null as string | null,
       demoUrl: null,
       type: "Research Project",
       status: "Active Research"
