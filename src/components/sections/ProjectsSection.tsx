@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 import Image from "next/image";
+import Link from "next/link";
 import { profile } from "@/data/profile";
 
 export default function ProjectsSection() {
@@ -241,9 +242,12 @@ export default function ProjectsSection() {
                   transition={{ duration: 0.6, delay: 0.5 }}
                   className="flex flex-wrap gap-4 pt-8"
                 >
-                  <button className="flex items-center px-6 py-3 bg-foreground text-background font-semibold rounded-xl hover:bg-foreground/90 transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
+                  <Link
+                    href={`/projects/${project.id}`}
+                    className="flex items-center px-6 py-3 bg-foreground text-background font-semibold rounded-xl hover:bg-foreground/90 transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                  >
                     View Case Study <ArrowRight className="ml-2 w-4 h-4" />
-                  </button>
+                  </Link>
 
                   {project.githubUrl && project.githubUrl !== "#" && (
                     <a 

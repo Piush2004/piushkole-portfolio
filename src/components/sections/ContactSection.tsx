@@ -13,13 +13,23 @@ export default function ContactSection() {
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    // Web3Forms Access Key, provided via env var so it isn't hardcoded in source.
+    // Get a free key at https://web3forms.com/ and set it in Vercel as
+    // NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY (Project Settings -> Environment Variables).
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+
+    if (!accessKey) {
+      setResult(
+        `The contact form isn't fully configured yet. Please email me directly at ${profile.contact.emails[0]}.`
+      );
+      return;
+    }
+
     setIsSubmitting(true);
     setResult("Sending...");
     const formData = new FormData(event.currentTarget);
-
-    // Provide your Web3Forms Access Key here. 
-    // You can get one for free at https://web3forms.com/
-    formData.append("access_key", "YOUR_WEB3FORMS_ACCESS_KEY_HERE");
+    formData.append("access_key", accessKey);
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
