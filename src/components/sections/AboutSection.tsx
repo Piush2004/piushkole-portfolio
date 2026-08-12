@@ -1,17 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Brain, GraduationCap, Target, Briefcase, Code, Database, Sparkles, Server, LucideIcon } from "lucide-react";
+import { Brain, GraduationCap, Target, Briefcase, Code, Database, Sparkles, Server, Eye, Layers, LucideIcon } from "lucide-react";
 import { profile } from "@/data/profile";
 
 // Mapping icons by name strings
 const iconMap: Record<string, LucideIcon> = {
   Brain: Brain,
-  Eye: Code,
-  Layers: Server,
+  Eye: Eye,
+  Layers: Layers,
   Sparkles: Sparkles,
   Code: Code,
-  Database: Database
+  Database: Database,
+  Server: Server
 };
 
 export default function AboutSection() {

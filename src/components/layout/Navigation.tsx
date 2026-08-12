@@ -15,6 +15,7 @@ const links = [
   { name: "Skills", href: "#skills" },
   { name: "Timeline", href: "#timeline" },
   { name: "Projects", href: "#projects" },
+  { name: "Certificates", href: "#certificates" },
   { name: "Process", href: "#process" },
   { name: "GitHub", href: "#github" },
   { name: "Contact", href: "#contact" },

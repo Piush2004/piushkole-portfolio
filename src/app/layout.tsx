@@ -17,8 +17,12 @@ const geistMono = Geist_Mono({
 });
 
 import { profile } from "@/data/profile";
+import { getSiteUrl } from "@/lib/utils";
+
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: `${profile.name} | ${profile.role}`,
   description: `Premium portfolio of ${profile.name} - ${profile.headline} Specialized in AI Agents, Computer Vision, and Backend Development.`,
   keywords: ["AI Engineer", "Data Scientist", profile.name, "Portfolio", "Machine Learning", "Backend Developer", "React", "Next.js"],
@@ -26,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://piushkole.com",
+    url: siteUrl,
     title: `${profile.name} | ${profile.role}`,
     description: `Premium portfolio of ${profile.name} - ${profile.headline}`,
     siteName: `${profile.name} Portfolio`,
@@ -48,7 +52,7 @@ export default function RootLayout({
     '@type': 'Person',
     name: profile.name,
     jobTitle: profile.role,
-    url: 'https://piushkole.com',
+    url: siteUrl,
     sameAs: [
       profile.socials.linkedin,
       profile.socials.github,

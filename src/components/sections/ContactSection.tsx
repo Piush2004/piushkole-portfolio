@@ -157,7 +157,7 @@ export default function ContactSection() {
             <SiGithub className="mr-2" size={18} /> GitHub
           </a>
           <a
-            href={profile.socials.resume.replace('/edit?usp=sharing', '/export?format=pdf')}
+            href={profile.socials.resume}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center px-6 py-3 bg-card border border-border text-foreground font-medium rounded-lg hover:bg-accent/50 transition-colors w-full sm:w-auto justify-center"
