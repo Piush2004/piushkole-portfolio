@@ -142,7 +142,7 @@ export const profile = {
       challenges: "Keeping the shipped verdict pipeline honest about what it can and can't show: claim highlighting only matches text verbatim, a failed retrieval shows an explicit error instead of a false \"no sources\" result, and the experimental density score stays hidden until it's properly calibrated.",
       lessonsLearned: "Testing the density-based signal across two fact-checking datasets (FEVER and AVeriTeC) showed it doesn't generalize — a modest signal on one dataset inverted on the other, and cross-dataset evaluation collapsed it to chance. Negative results are still results: the shipped verdict pipeline doesn't lean on a signal that doesn't hold up.",
       futureScope: "Testing temporal conditions and full NLI baselines, and building richer structural control populations before revisiting any density-based signal.",
-      image: "/images/llm_hallucination.jpg",
+      image: null,
       githubUrl: "https://github.com/Piush2004/synthetic-silence" as string | null,
       demoUrl: null,
       type: "Open-Source Tool",
