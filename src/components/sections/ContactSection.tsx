@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Mail, Download, Send } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
@@ -54,30 +53,18 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-background">
+    <section id="contact" className="py-24 relative bg-background">
       <div className="container mx-auto px-6 relative z-10 max-w-4xl text-center">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7 }}
-          className="mb-8"
-        >
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-foreground tracking-tight">
-            Let&apos;s Build Something Intelligent
+        <div className="mb-8">
+          <h2 className="font-display text-4xl md:text-6xl font-semibold mb-6 text-foreground tracking-tight">
+            Let&apos;s build something intelligent
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto font-medium mb-12">
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-12">
             I&apos;m currently open to placements, internships, freelance opportunities, and collaborations in AI, Data Science, and Backend Development.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          className="max-w-2xl mx-auto bg-card border border-border p-8 rounded-lg shadow-sm mb-12 text-left"
-        >
+        <div className="max-w-2xl mx-auto bg-card border border-border p-8 rounded-2xl mb-12 text-left">
           <form onSubmit={onSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">Name</label>
@@ -86,7 +73,7 @@ export default function ContactSection() {
                 id="name"
                 name="name"
                 required
-                className="w-full bg-background border border-border rounded-md px-4 py-3 text-foreground focus:outline-none focus:ring-1 focus:ring-foreground transition-all"
+                className="w-full bg-background border border-border rounded-md px-4 py-3 text-foreground focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
                 placeholder="John Doe"
               />
             </div>
@@ -97,7 +84,7 @@ export default function ContactSection() {
                 id="email"
                 name="email"
                 required
-                className="w-full bg-background border border-border rounded-md px-4 py-3 text-foreground focus:outline-none focus:ring-1 focus:ring-foreground transition-all"
+                className="w-full bg-background border border-border rounded-md px-4 py-3 text-foreground focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
                 placeholder="john@example.com"
               />
             </div>
@@ -108,43 +95,37 @@ export default function ContactSection() {
                 name="message"
                 required
                 rows={5}
-                className="w-full bg-background border border-border rounded-md px-4 py-3 text-foreground focus:outline-none focus:ring-1 focus:ring-foreground transition-all resize-none"
+                className="w-full bg-background border border-border rounded-md px-4 py-3 text-foreground focus:outline-none focus:ring-1 focus:ring-primary transition-colors resize-none"
                 placeholder="How can we collaborate?"
               ></textarea>
             </div>
-            
+
             <button
               type="submit"
               disabled={isSubmitting}
               className="w-full flex items-center justify-center px-8 py-4 bg-foreground text-background font-medium rounded-lg hover:bg-foreground/90 transition-colors disabled:opacity-70"
             >
-              <Send className="mr-2" size={18} /> 
-              {isSubmitting ? "Sending..." : "Send Message"}
+              <Send className="mr-2" size={18} />
+              {isSubmitting ? "Sending..." : "Send message"}
             </button>
             {result && (
               <p className="text-center mt-4 text-sm font-medium text-muted-foreground">{result}</p>
             )}
           </form>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-          className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4"
-        >
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4">
           <a
             href={`mailto:${profile.contact.emails[0]}`}
-            className="flex items-center px-6 py-3 bg-card border border-border text-foreground font-medium rounded-lg hover:bg-accent/50 transition-colors w-full sm:w-auto justify-center"
+            className="flex items-center px-6 py-3 bg-card border border-border text-foreground font-medium rounded-lg hover:bg-muted transition-colors w-full sm:w-auto justify-center"
           >
-            <Mail className="mr-2" size={18} /> Direct Email
+            <Mail className="mr-2" size={18} /> Direct email
           </a>
           <a
             href={profile.socials.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center px-6 py-3 bg-card border border-border text-foreground font-medium rounded-lg hover:bg-accent/50 transition-colors w-full sm:w-auto justify-center"
+            className="flex items-center px-6 py-3 bg-card border border-border text-foreground font-medium rounded-lg hover:bg-muted transition-colors w-full sm:w-auto justify-center"
           >
             <FaLinkedin className="mr-2 text-[#0077b5]" size={18} /> LinkedIn
           </a>
@@ -152,7 +133,7 @@ export default function ContactSection() {
             href={profile.socials.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center px-6 py-3 bg-card border border-border text-foreground font-medium rounded-lg hover:bg-accent/50 transition-colors w-full sm:w-auto justify-center"
+            className="flex items-center px-6 py-3 bg-card border border-border text-foreground font-medium rounded-lg hover:bg-muted transition-colors w-full sm:w-auto justify-center"
           >
             <SiGithub className="mr-2" size={18} /> GitHub
           </a>
@@ -160,11 +141,11 @@ export default function ContactSection() {
             href={profile.socials.resume}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center px-6 py-3 bg-card border border-border text-foreground font-medium rounded-lg hover:bg-accent/50 transition-colors w-full sm:w-auto justify-center"
+            className="flex items-center px-6 py-3 bg-card border border-border text-foreground font-medium rounded-lg hover:bg-muted transition-colors w-full sm:w-auto justify-center"
           >
-            <Download className="mr-2" size={18} /> Resume
+            <Download className="mr-2" size={18} /> Résumé
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

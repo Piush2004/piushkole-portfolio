@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
+import {
   SiPython, SiHtml5,
-  SiOpencv, 
+  SiOpencv,
   SiScikitlearn, SiPandas, SiNumpy,
   SiGithub, SiFastapi, SiDocker, SiLinux
 } from "react-icons/si";
@@ -76,7 +76,7 @@ function SkillCard({ skill }: { skill: { name: string; icon: any; level: number 
       <motion.div
         whileHover={{ scale: 1.05, y: -2 }}
         transition={{ duration: 0.2, ease: "easeOut" }}
-        className="relative flex flex-col items-center justify-center p-4 bg-card border border-border/50 rounded-2xl w-28 h-28 hover:border-foreground/30 hover:shadow-md cursor-pointer overflow-hidden transition-all"
+        className="relative flex flex-col items-center justify-center p-4 bg-card border border-border rounded-2xl w-28 h-28 hover:border-foreground/30 hover:shadow-sm cursor-pointer overflow-hidden transition-all"
       >
         <AnimatePresence>
           {isHovered && (
@@ -88,11 +88,11 @@ function SkillCard({ skill }: { skill: { name: string; icon: any; level: number 
               className="absolute top-2 left-0 right-0 px-3 flex flex-col items-center gap-1"
             >
               <div className="w-full h-1 bg-muted rounded-full overflow-hidden">
-                <motion.div 
+                <motion.div
                   initial={{ width: 0 }}
                   animate={{ width: `${skill.level}%` }}
                   transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-                  className="h-full bg-foreground rounded-full"
+                  className="h-full bg-primary rounded-full"
                 />
               </div>
               <span className="text-[10px] font-bold text-foreground">
@@ -102,11 +102,11 @@ function SkillCard({ skill }: { skill: { name: string; icon: any; level: number 
           )}
         </AnimatePresence>
 
-        <div 
+        <div
           className="flex flex-col items-center transition-transform duration-300 group-hover/skill:translate-y-2"
         >
           <skill.icon className="w-8 h-8 mb-2 text-muted-foreground group-hover/skill:text-foreground transition-colors duration-300" />
-          <span className="text-[11px] leading-tight font-medium text-center text-muted-foreground group-hover/skill:text-foreground transition-colors duration-300">
+          <span className="font-mono text-[11px] leading-tight text-center text-muted-foreground group-hover/skill:text-foreground transition-colors duration-300">
             {skill.name}
           </span>
         </div>
@@ -117,36 +117,26 @@ function SkillCard({ skill }: { skill: { name: string; icon: any; level: number 
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="py-24 relative overflow-hidden">
+    <section id="skills" className="py-24 relative bg-background">
       <div className="container mx-auto px-6 relative z-10">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7 }}
-          className="mb-16 text-left"
-        >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
+        <div className="mb-16 text-left">
+          <h2 className="font-display text-3xl md:text-5xl font-semibold mb-4 text-foreground">
             Skills
           </h2>
-          <div className="w-12 h-1 bg-foreground rounded-full" />
-        </motion.div>
+          <div className="w-12 h-1 bg-primary rounded-full" />
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {skillCategories.map((category, idx) => (
-            <motion.div 
+          {skillCategories.map((category) => (
+            <div
               key={category.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: idx * 0.1, duration: 0.5 }}
-              className="bg-card/50 border border-border/50 rounded-2xl p-8 hover:bg-card hover:border-border transition-colors"
+              className="bg-card border border-border rounded-2xl p-8"
             >
               <div className="flex items-center space-x-4 mb-8">
                 <div className="p-3 bg-muted rounded-xl text-foreground">
                   <category.icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground">{category.title}</h3>
+                <h3 className="text-xl font-semibold text-foreground">{category.title}</h3>
               </div>
 
               <div className="flex flex-wrap gap-4">
@@ -154,7 +144,7 @@ export default function SkillsSection() {
                   <SkillCard key={skill.name} skill={skill} />
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

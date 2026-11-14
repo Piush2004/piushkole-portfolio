@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Camera, BrainCircuit, Sparkles } from "lucide-react";
 
 const researchAreas = [
@@ -23,39 +20,29 @@ const researchAreas = [
 
 export default function ResearchSection() {
   return (
-    <section id="research" className="py-24 relative overflow-hidden bg-background">
+    <section id="research" className="py-24 relative bg-background">
       <div className="container mx-auto px-6 relative z-10">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7 }}
-          className="mb-16"
-        >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground flex items-center">
-             Research
+        <div className="mb-16">
+          <h2 className="font-display text-3xl md:text-5xl font-semibold mb-4 text-foreground">
+            Research
           </h2>
-          <div className="w-12 h-1 bg-foreground rounded-full" />
-        </motion.div>
+          <div className="w-12 h-1 bg-primary rounded-full" />
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {researchAreas.map((area, idx) => (
-            <motion.div
+          {researchAreas.map((area) => (
+            <div
               key={area.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: idx * 0.1 }}
-              className="bg-card border border-border/50 rounded-2xl p-8 hover:border-foreground/30 hover:shadow-sm transition-all flex flex-col"
+              className="bg-card border border-border rounded-2xl p-8 hover:border-foreground/30 transition-colors flex flex-col"
             >
               <div className="w-12 h-12 bg-muted rounded-xl flex items-center justify-center mb-6">
                 <area.icon className="w-6 h-6 text-foreground" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">{area.title}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-4">{area.title}</h3>
               <p className="text-muted-foreground leading-relaxed flex-grow">
                 {area.description}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

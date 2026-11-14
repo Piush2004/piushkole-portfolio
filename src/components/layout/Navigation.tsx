@@ -52,14 +52,14 @@ export default function Navigation() {
       <motion.nav
         className={cn(
           "fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 w-[95%] md:w-[90%] max-w-5xl rounded-full",
-          scrolled ? "bg-card/90 backdrop-blur-md border border-border shadow-sm" : "bg-transparent"
+          scrolled ? "bg-card/95 backdrop-blur-md border border-border shadow-sm" : "bg-transparent"
         )}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
       >
         <div className="flex items-center justify-between px-6 py-3">
-          <Link href="#home" className="text-lg font-bold text-foreground">
+          <Link href="#home" className="font-display text-lg font-semibold text-foreground">
             {profile.name.split(' ')[0]}.
           </Link>
 
